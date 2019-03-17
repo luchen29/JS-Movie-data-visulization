@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Winer Overall Data Visulize</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="WineData.css">
+	<!-- <script src="http://mbostock.github.com/d3/d3.js"></script>-->
+</head>
+
+
+<body>
+	<!-- navigation bar -->
+	<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark navbar fixed-top">
+	  	<a class="navbar-brand" href="file:///Users/luchenliu/Documents/UAlberta_CS_MM/802_MM_Communications/assignments_minipj/assignment3_minipj/webpage/Winer_HomePage.html"> Winer  <i class="fas fa-wine-glass-alt"></i></a>
+	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		</button>
+	
+	  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		    <!--
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#">Wine Data<span class="sr-only">(current)</span></a>
+		      </li>
+		  	-->
+		      <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Wine Data</a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+		          <a class="dropdown-item" href="file:///Users/luchenliu/Documents/UAlberta_CS_MM/802_MM_Communications/assignments_minipj/assignment3_minipj/webpage/Winer_DataVisualize.html">Overall</a>
+		          <a class="dropdown-item" href="file:///Users/luchenliu/Documents/UAlberta_CS_MM/802_MM_Communications/assignments_minipj/assignment3_minipj/webpage/Winer_GlobalView.html#"> <i class="fas fa-globe-americas"></i> World Map</a>
+		        </div>
+		      </li>
+
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#">Search</a>
+		      </li>
+
+		      <li class="nav-item dropdown" >
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More Introduction</a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="#">Europ</a>
+		          <a class="dropdown-item" href="#">North America</a>
+		          <a class="dropdown-item" href="#">South America</a>
+		          <a class="dropdown-item" href="#">Asia</a>
+		          <a class="dropdown-item" href="#">Pasific</a>
+		        </div>
+		      </li>
+		    </ul>
+	    <!--
+	    <form class="form-inline my-2 my-lg-0">
+	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	    </form>
+		-->
+		</div>
+	</nav>
+	
+	<div class='container'>
+	<!-- create the jumnotron, for desplaying the title of the chart -->
+		<div class='jumbotron'>
+			<h1 id="OverallTitle">Data has a better idea.</h1>
+		</div>
+		<div id="Fig1"> 
+		    <h4 id="h41">Which country has the highest price wine?</h4>
+		</div>
+		<div id="Fig2"> 
+		    <h4 id="h42">Which country has the best quality wine?</h4>
+		</div>
+		<div id="Fig3"> 
+		    <h4 id="h43">Which is the most productive country?</h4>
+		</div>
+	</div>
+
+	<!-- E.g. plot out a Donut chart -->
+	<!-- <script type="text/javascript">
+		var data = [10, 50, 80];
+		var r = 300;
+		var color = d3.scale.ordinal()
+					.range(["red","blue","orange"]);
+		var canvas = d3.select("body").select("#scdiv").append("svg")
+					.attr("width",1500)
+					.attr("height",1500);	
+		// generate a group??				
+		var group = canvas.append("g")
+					.attr("transform", "translate(300,300)");
+		// generate an arc svg
+		var arc = d3.svg.arc()
+					.innerRadius(200)
+					.outerRadius(r);
+		// define the pie layout for data visulizing
+		var pie = d3.layout.pie()
+					.value(function(d) {return d;});
+		// put data into "arc" with a layout format of "pie", and gather all "arc" as a group
+		var arcs = group.selectAll(".arc")
+					.data(pie(data))
+					.enter()
+					.append("g")
+					.attr("class","arc");
+		// generate "path" for the arcs to display it
+		arcs.append("path")
+					.attr("d",arc)
+					.attr("fill", function(d) {return color(d.data);});
+		// append text
+		arcs.append("text")
+					.attr("transform", function(d) {return "translate"})
+	</script> -->
+
+	<!-- include all the script here-->
+	<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> 
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+  	<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+	<!-- Scores by Country -- interactive bar chart -->
+	<script>
+	    var margin = {top: 20, right: 20, bottom: 30, left: 40},
+	        width = 1000 - margin.left - margin.right,
+	        height = 400 - margin.top - margin.bottom;
+
+	    var x = d3.scale.ordinal()
+	        .rangeRoundBands([0, width], .1);
+
+	    var y = d3.scale.linear()
+	        .range([height, 0]);
+
+	    var xAxis = d3.svg.axis()
+	        .scale(x)
+	        .orient("bottom");
+
+	    var yAxis = d3.svg.axis()
+	        .scale(y)
+	        .orient("left");
+
+	    var tip = d3.tip()
+	      .attr('class', 'd3-tip')
+	      .offset([-10, 0])
+	      .html(function(i) {
+	        return ("Country: <span style='color:orangered'>" + i.country + "</span>" + 
+	        	"Score: <span style='color:orangered'>" + i.points + "</span>");
+	      })
+
+
+	    var svg = d3.select("body").select("#Fig2").append("svg")
+	        .attr("width", width + margin.left + margin.right)
+	        .attr("height", height + margin.top + margin.bottom)
+	      .append("g")
+	        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+	    svg.call(tip);
+
+	    //input data
+	    d3.csv("top_points_sequence_without_index.csv", type, function(error, data) {
+	      x.domain(data.map(function(i) { return (i.country); }));
+	      y.domain([82, d3.max(data, function(i) { return i.points; })]);
+
+	      svg.append("g")
+	          .attr("class", "x axis")
+	          .attr("transform", "translate(0," + height + ")")
+	          .call(xAxis);
+
+	      svg.append("g")
+	          .attr("class", "y axis")
+	          .call(yAxis)
+	         .append("text")
+	          .attr("transform", "rotate(-90)")
+	          .attr("y", 6)
+	          .attr("dy", ".71em")
+	          .style("text-anchor", "end")
+	          .text("Highest Score");
+
+	      svg.selectAll(".bar")
+	          .data(data)
+	          .enter()
+	          .append("rect")
+	          .attr("class", "bar")
+	          .attr("x", function(i) { return x(i.country); })
+	          .attr("width", x.rangeBand())
+	          .attr("y", function(i) { return y(i.points); })
+	          .attr("height", function(i) { return height - y(i.points); })
+	          .on('mouseover', tip.show)
+	          .on('mouseout', tip.hide)
+	    });
+
+	    function type(i) {
+	      i.points = +i.points;
+	      return i;}
+	</script>
+
+
+
+
+
+	<!-- Price by Country -- interactive bar chart -->
+	<script>
+	    var margin = {top: 20, right: 20, bottom: 20, left: 40},
+	        width = 1000 - margin.left - margin.right,
+	        height = 400 - margin.top - margin.bottom;
+
+	    var x = d3.scale.ordinal()
+	        .rangeRoundBands([15, width], .1);
+
+	    var y = d3.scale.linear()
+	        .range([height, 0]);
+
+	    var xAxis = d3.svg.axis()
+	        .scale(x)
+	        .orient("bottom");
+
+	    var yAxis = d3.svg.axis()
+	        .scale(y)
+	        .orient("left");
+
+	    var tip2 = d3.tip()
+	      .attr('class', 'd3-tip')
+	      .offset([-10, 0])
+	      // .html(function(d) {
+	      //   return ("Country: <span style='color:orangered'>" + d.country + "</span>");
+	      // })
+	      .html(function(d) {
+	        return ("Country: <span style='color:orangered'>" + d.country + "</span>" + 
+	        	"Price: <span style='color:orangered'>" + d.price + "</span>");
+	      });
+
+	    var svg2 = d3.select("body").select("#Fig1").append("svg")
+	        .attr("width", width + margin.left + margin.right)
+	        .attr("height", height + margin.top + margin.bottom)
+	      .append("g")
+	        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+	    svg2.call(tip2);
+
+	    //input data
+	    d3.csv("top20_price_sequence_without_index.csv", type, function(error, data) {
+	      x.domain(data.map(function(d) { return (d.country); }));
+	      y.domain([50, d3.max(data, function(d) { return d.price; })]);
+
+	      svg2.append("g")
+	          .attr("class", "x axis")
+	          .attr("transform", "translate(0," + height + ")")
+	          .call(xAxis);
+
+	      svg2.append("g")
+	          .attr("class", "y axis")
+	          .call(yAxis)
+	         .append("text")
+	          .attr("transform", "rotate(-90)")
+	          .attr("y", 6)
+	          .attr("dy", ".71em")
+	          .style("text-anchor", "end")
+	          .text("Highest Price");
+
+	      svg2.selectAll(".bar2")
+	          .data(data)
+	          .enter()
+	          .append("rect")
+	          .attr("class", "bar2")
+	          .attr("x", function(d) { return x(d.country); })
+	          .attr("width", x.rangeBand())
+	          .attr("y", function(d) { return y(d.price); })
+	          .attr("height", function(d) { return height - y(d.price); })
+	          .on('mouseover', tip2.show)
+	          .on('mouseout', tip2.hide)
+	    });
+
+	    function type(d) {
+	      d.price = +d.price;
+	      return d;}
+	</script>
+
+
+
+
+
+	<!-- Numbers by Country -- interactive bar chart -->
+	<script>
+	    var margin = {top: 20, right: 20, bottom: 20, left: 40},
+	        width = 1000 - margin.left - margin.right,
+	        height = 400 - margin.top - margin.bottom;
+
+	    var x = d3.scale.ordinal()
+	        .rangeRoundBands([15, width], .1);
+
+	    var y = d3.scale.linear()
+	        .range([height, 0]);
+
+	    var xAxis = d3.svg.axis()
+	        .scale(x)
+	        .orient("bottom");
+
+	    var yAxis = d3.svg.axis()
+	        .scale(y)
+	        .orient("left");
+
+	    var tip3 = d3.tip()
+	      .attr('class', 'd3-tip')
+	      .offset([-10, 0])
+	      .html(function(d) {
+	        return ("Country: <span style='color:orangered'>" + d.country + "</span>" + 
+	        	"Production Amount: <span style='color:orangered'>" + d.numbers + "</span>");
+	      })
+
+	    var svg3 = d3.select("body").select("#Fig3").append("svg")
+	        .attr("width", width + margin.left + margin.right)
+	        .attr("height", height + margin.top + margin.bottom)
+	      .append("g")
+	        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+	    svg3.call(tip3);
+
+	    //input data
+	    d3.csv("top20_number_sequence_without_index.csv", type, function(error, data) {
+	      x.domain(data.map(function(d) { return (d.country); }));
+	      y.domain([0, d3.max(data, function(d) { return d.numbers; })]);
+
+	      svg3.append("g")
+	          .attr("class", "x axis")
+	          .attr("transform", "translate(0," + height + ")")
+	          .call(xAxis);
+
+	      svg3.append("g")
+	          .attr("class", "y axis")
+	          .call(yAxis)
+	         .append("text")
+	          .attr("transform", "rotate(-90)")
+	          .attr("y", 6)
+	          .attr("dy", ".71em")
+	          .style("text-anchor", "end")
+	          .text("Production Amount");
+
+	      svg3.selectAll(".bar3")
+	          .data(data)
+	          .enter()
+	          .append("rect")
+	          .attr("class", "bar3")
+	          .attr("x", function(d) { return x(d.country); })
+	          .attr("width", x.rangeBand())
+	          .attr("y", function(d) { return y(d.numbers); })
+	          .attr("height", function(d) { return height - y(d.numbers); })
+	          .on('mouseover', tip3.show)
+	          .on('mouseout', tip3.hide)
+	    });
+
+	    function type(d) {
+	      d.numbers = +d.numbers;
+	      return d;}
+	</script>
+</body>
+</html>

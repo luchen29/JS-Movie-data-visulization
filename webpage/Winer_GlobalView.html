@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+	<title>Winer Global Map Data Visulize</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <link rel="stylesheet" href="WinerGlobal.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark navbar fixed-top">
+	  	<a class="navbar-brand" href="file:///Users/luchenliu/Documents/UAlberta_CS_MM/802_MM_Communications/assignments_minipj/assignment3_minipj/webpage/Winer_HomePage.html"> Winer  <i class="fas fa-wine-glass-alt"></i></a>
+	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		</button>
+	
+
+	  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		    <!--
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#">Wine Data<span class="sr-only">(current)</span></a>
+		      </li>
+		  	-->
+		      <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Wine Data</a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+		          <a class="dropdown-item" href="file:///Users/luchenliu/Documents/UAlberta_CS_MM/802_MM_Communications/assignments_minipj/assignment3_minipj/webpage/Winer_DataVisualize.html">Overall</a>
+		          <a class="dropdown-item" href="file:///Users/luchenliu/Documents/UAlberta_CS_MM/802_MM_Communications/assignments_minipj/assignment3_minipj/webpage/Winer_GlobalView.html#"> <i class="fas fa-globe-americas"></i> World Map</a>
+		        </div>
+		      </li>
+
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#">Search</a>
+		      </li>
+
+		      <li class="nav-item dropdown" >
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More Introduction</a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="#">Europ</a>
+		          <a class="dropdown-item" href="#">North America</a>
+		          <a class="dropdown-item" href="#">South America</a>
+		          <a class="dropdown-item" href="#">Asia</a>
+		          <a class="dropdown-item" href="#">Pasific</a>
+		        </div>
+		      </li>
+		    </ul>
+	    <!--
+	    <form class="form-inline my-2 my-lg-0">
+	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	    </form>
+		-->
+		</div>
+	</nav>
+	<div class="container">
+		<div class='jumbotron'>
+			<h1 id="JumboTitle">Look the data world wide.</h1>
+		</div>
+		<div id="map"></div>
+		<div id="tooltip">
+		  country: <strong><span id="Country" class="info" style='color:orangered'></span></strong><br> 
+		  price avg.: <strong><span id="AvgPrice" class="info" style='color:orangered'></span></strong><br>
+		  score avg.: <strong><span id="AvgScore" class="info" style='color:orangered'></span></strong><br> 
+		  production amt.: <strong><span id="ProductionAmount" class="info" style='color:orangered'></span></strong><br>  
+		  <!-- winery num.: <strong><span id="WineryNum" class="info" style='color:orangered'></span></strong><br>  
+		  brand num.: <strong><span id="BrandNum" class="info" style='color:orangered'></span></strong><br>  -->
+		  <!-- key word: <strong><span id="KeyWord" class="info" style='color:orangered'></span></strong><br>  -->
+		</div>
+	</div>
+
+	<!-- include j.query -->
+	<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> 
+	<!-- include bootstrap -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- D3 graphing library -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js'></script>
+	<!-- Topojson library -->
+	<script src='https://d3js.org/topojson.v1.min.js'></script>
+	<!-- .js file -->
+	<script src="WinerGlobal.js"></script>
+	<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script> -->
+	<!-- <script src="https://d3js.org/d3-array.v1.min.js"></script> -->
+	<!-- <script src="https://d3js.org/d3-geo.v1.min.js"></script> -->
+
+</body>
+</html> 

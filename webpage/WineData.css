@@ -1,0 +1,111 @@
+body{
+	/*padding-top: 70px;*/
+	/*font: 10px sans-sarif;*/
+	/*color: #2c3e50;*/
+	/*color: #fff;*/
+}
+h4{
+	font-size:22px;
+	padding-left:40px;
+	text-align: center;
+}
+svg{
+    display: block;
+    margin: auto;
+}
+.container{
+	padding-top: 70px;
+}
+
+.jumbotron{
+	color: #2c3e50;
+	background: #ecf0f1;
+	/*text-align: center;*/
+	height: 50px;
+	/*background-image: url("data_background.jpeg");
+	background-size: cover;
+	background-position: center;*/
+}
+
+/*h2{
+	color: #fff;
+}*/
+
+#Fig1{
+	font-size:8.5px;
+}
+#Fig2{
+	font-size:8.5px;
+}
+#Fig3{
+	font-size:8.5px;
+}
+#h42{
+	padding-top: 40px;
+}
+#h43{
+	padding-top: 40px;
+}
+.axis path,
+.axis line{        
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+/*orange orangered// purple indigo// teal green*/
+.bar{			
+	fill: orange;
+}
+.bar:hover{
+	fill: orangered;
+}
+
+.bar2{			
+	fill: purple;
+}
+.bar2:hover{
+	fill: indigo;
+}
+
+.bar3{			
+	fill: teal;
+}
+.bar3:hover{
+	fill: green;
+}
+
+.x.axis path{
+	display: none;
+}
+.d3-tip {
+	display: flex;
+	flex-direction: column;
+	position: absolute; 
+	line-height: 1;
+	font-weight: bold;
+	padding: 12px;
+	background: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	border-radius: 2px;
+	font-size:12px;
+}
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 8px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+
