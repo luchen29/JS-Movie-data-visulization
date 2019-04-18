@@ -1,0 +1,46 @@
+#worldmap {
+    /*background: #234c75;*/
+    /*background: #a2c6cb;*/
+    /*background: rgba(162, 198, 203, 0.9);*/
+    background: rgba(222, 246, 249,0.9);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    border: solid 0.1px #aaa;
+    border-radius: 10px;
+    position: absolute;
+    height: 500px;
+    /*border:solid black 1px;*/
+}
+
+#worldMapTitle{
+	background:#fed136;
+	border-radius: 10px;
+	width:1101px;
+	height:40px;
+	opacity: 0.8;
+	padding-top:5px;
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+}
+
+#play{
+	font-family:'Josefin Sans', sans-serif;
+}
+#worldsvg{
+	padding-top:20px;
+}
+#worldMapContainer{
+	padding-top:100px;
+}
+.jumbotron{
+	height: 70px;
+	background: rgba(222, 246, 249,0.9);
+}
+.country {
+    stroke: black;
+    stroke-width: 0.1;
+}
+g.button:hover{
+    opacity: 0.75;
+    cursor: pointer;
+    /*height:500px;*/
+}

@@ -1,0 +1,318 @@
+/*body {*/
+/*  background-color: "";*/
+/*}*/
+
+/*==========================================================*/
+/*Nav-Bar CSS*/
+#mainNav {
+    background-color: #212529
+}
+#mainNav .navbar-toggler {
+    font-size: 12px;
+    right: 0;
+    padding: 13px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 0;
+    background-color: #fed136;
+    font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'
+}
+#mainNav .navbar-brand {
+    color: #fed136;
+    font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'
+}
+#mainNav .navbar-brand.active,
+#mainNav .navbar-brand:active,
+#mainNav .navbar-brand:focus,
+#mainNav .navbar-brand:hover {
+    color: #fec503
+}
+#mainNav .navbar-nav .nav-item .nav-link {
+    font-size: 90%;
+    font-weight: 400;
+    padding: .75em 0;
+    letter-spacing: 1px;
+    color: #fff;
+    font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'
+}
+#mainNav .navbar-nav .nav-item .nav-link.active,
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: #fed136
+}
+@media (min-width:992px) {
+    #mainNav {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        -webkit-transition: padding-top .3s, padding-bottom .3s;
+        transition: padding-top .3s, padding-bottom .3s;
+        border: none;
+        background-color: transparent
+    }
+    #mainNav .navbar-brand {
+        font-size: 1.75em;
+        -webkit-transition: all .3s;
+        transition: all .3s
+    }
+    #mainNav .navbar-nav .nav-item .nav-link {
+        padding: 1.1em 1em !important
+    }
+    #mainNav.navbar-shrink {
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: #212529
+    }
+    #mainNav.navbar-shrink .navbar-brand {
+        font-size: 1.25em;
+        padding: 12px 0
+    }
+}
+
+/*==========================================================*/
+/*WorldMap CSS*/
+
+#worldMapContainer{
+	padding-top:100px;
+	/*width:1140;*/
+	/*height:550;*/
+}
+#worldmap {
+    /*background: #234c75;*/
+    /*background: #a2c6cb;*/
+    /*background: rgba(162, 198, 203, 0.9);*/
+    background: rgba(222, 246, 249,0.9);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    border: solid 0.1px #aaa;
+    border-radius: 10px;
+    position: absolute;
+    height: 500px;
+    /*border:solid black 1px;*/
+}
+#worldMapTitle{
+	background:#fed136;
+	border-radius: 10px;
+	width:1100px;
+	height:40px;
+	opacity: 0.8;
+	padding-top:5px;
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+}
+#play{
+	font-family:'Josefin Sans', sans-serif;
+}
+#worldsvg{
+	padding-top:20px;
+}
+.jumbotron{
+	height: 70px;
+	background: rgba(222, 246, 249,0.9);
+}
+.country {
+    stroke: black;
+    stroke-width: 0.1;
+}
+g.button:hover{
+    opacity: 0.75;
+    cursor: pointer;
+    /*height:500px;*/
+}
+
+
+/*==========================================================*/
+/*Genres Chart CSS*/
+#genres {
+  padding-top:520px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+#canvasGenres{
+  width: 1100px;
+  max-height: 250px;
+}
+.card {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  padding-bottom:20px;
+  position: absolute;
+  /*top: 40%;*/
+  /*left: 1%;*/
+  /*transform: translate(-50%, -50%);*/
+  /*max-width: 900px;*/
+  /*width: 900px;*/
+  /*max-height: 500px;*/
+  /*height:700px;*/
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card .about {
+  height: 40px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+.card .about h3,
+.card .about .lead {
+  font-weight: 300;
+  margin: 0;
+}
+.card .about h3 {
+  font-size: 24px;
+}
+.card .about .lead {
+  color: #aaa;
+}
+.card .info {
+  float: left;
+  /*padding: 10px 30px 10px 0;*/
+}
+.card .info p {
+  font-size: 11px;
+  color: #aaa;
+  font-weight: 300;
+}
+.legends {
+  /*padding-top: 20px;*/
+  overflow: hidden;
+}
+.legend {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left:8px;
+  border-radius: 50%;
+}
+.legend--this {
+  background-color: #5555FF;
+}
+.legend--prev {
+  background-color: #FF55B8;
+  text-align: right;
+}
+.axis {
+  position: absolute;
+  color: #000;
+  z-index: 1;
+  text-transform: uppercase;
+  display: flex;
+  width: 100%;
+  bottom: 10px;
+}
+.axis .tick {
+  flex: 2;
+  position: relative;
+  overflow: hidden;
+  opacity: 0.6;
+  font-size: 9px;
+  text-align: center;
+  line-height: 40px;
+  padding-top: 80px;
+  height: 300px;
+}
+.axis .tick p{
+  /*text-align:bottom;*/
+  color:orangered;
+}
+.axis .tick:hover {
+  opacity: 5;
+  /*height: 230px;*/
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.axis .tick .value {
+  transform: translateY(-40px);
+  transition: 0.3s transform;
+  /*position: relative;*/
+  /*top: 30px;*/
+  color: #444;
+  border-radius: 2px;
+  width: 100%;
+  line-height: 30px;
+}
+.axis .tick:hover .value.value--this {
+  transform: translateY(0);
+  position: relative;
+  display: block;
+}
+.axis .tick:hover .value.value--prev {
+  transform: translateY(0);
+  position: relative;
+  display: block;
+}
+.value.value--this {
+  color: #5555FF;
+  font-weight: bold;
+}
+
+
+/*==========================================================*/
+/*revenueAndScore Chart CSS*/
+#canvasScore{
+  height: 250px;
+  width:540px;
+}
+#revenueAndScore{
+  padding-top:330px;
+}
+#revenue{
+  /*padding-top:330px;*/
+  height: 320px;
+  width: 570px;
+  position: absolute;
+}
+#score{
+  padding-left:847px;
+  padding-top:160px;
+  height: 320px;
+  width: 570px;
+  /*position: absolute;*/
+}
+#aboutScore{
+  height:298.8px;
+  width:540px;
+}
+.card2 {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  /*position: absolute;*/
+  width: 540px;
+  height: 320px;
+  padding-bottom:20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card3 {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  /*position: absolute;*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 540px;
+  height: 320px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#revenuePlotTitle {
+  font-size: 24px;
+  padding-left: 20px;
+  font-weight: 300;
+  margin: 0;
+}
+#scorePlotTitle{
+  font-size: 24px;
+  padding-left: 20px;
+  font-weight: 300;
+  margin: 0;
+}
+#scoreLead{
+  font-size: 15px;
+  padding-left: 20px;
+  font-weight: 300;
+  margin: 0;
+  color: #aaa;
+}
+#tooltip{
+  font-size: 13px;
+  padding-left: 20px;
+  color: #aaa;
+}
+
