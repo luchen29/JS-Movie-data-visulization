@@ -5,9 +5,9 @@
 * The entry port for this node.js project is app.js file.
 
 * In app.js - Routers including:
-===============================================================================================================================
+==============================================================================================================================
 Router Name   |   Methods  |  Usage and function					                                    | which file to render/redirect
-===============================================================================================================================
+==============================================================================================================================
 "/"           | GET        | For landing page; Will render the landing page 		              | landing.ejs 
               |            |
 "/visual"     | GET        | For data interactively visualization page; 		                  | visual.html 
@@ -26,7 +26,7 @@ Router Name   |   Methods  |  Usage and function					                           
               |            | the search page. Filter data from mongodb and display.
               |            |
 "/useraccount"| GET        | For user account profile page; Will render the useraccount page.	| useraccount.ejs 
-===============================================================================================================================
+==============================================================================================================================
 
 * pagkage.json including all the dependencies used in this project.
 
@@ -37,7 +37,7 @@ Router Name   |   Methods  |  Usage and function					                           
 * In public including all the data used in this project; CSS files for all the .ejs file and .html file; all .js files that supports the function.
 
 
-********************************************************************************************************************************
+******************************************************************************************************************************
 REMINDER:
 
 * If the .ejs file could not be opened, you could access to the cloud9 workspace to see the code.
@@ -46,4 +46,4 @@ REMINDER:
 
   This project is in folder --> Movie
 
-*********************************************************************************************************************************
+******************************************************************************************************************************
